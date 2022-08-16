@@ -22,24 +22,22 @@ class MessagesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /messages/1
-  def update
-    if @message.update(message_params)
-      render json: @message
+  # DELETE /messages/1
+  def destroy
+    @message = Message.find(params[:id])
+    @message.destroy
+
+    if @message.destroy
+      render json: 'Message deleted!', status: :ok
     else
       render json: @message.errors, status: :unprocessable_entity
     end
   end
 
-  # DELETE /messages/1
-  def destroy
-    @message.destroy
-  end
-
   private
 
-    # Only allow a list of trusted parameters through.
-    def message_params
-      params.require(:message).permit(:title, :text)
-    end
+  # Only allow a list of trusted parameters through.
+  def message_params
+    params.require(:message).permit(:title, :text)
+  end
 end
