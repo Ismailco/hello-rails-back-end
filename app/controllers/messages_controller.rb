@@ -1,11 +1,9 @@
 class MessagesController < ApplicationController
-  before_action :set_message, only: %i[ show update destroy ]
-
   # GET /messages
   def index
     @messages = Message.all
-
-    render json: @messages
+    @message = Message.all.sample(5).first
+    render json: @message.text
   end
 
   # GET /messages/1
@@ -39,10 +37,6 @@ class MessagesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_message
-      @message = Message.find(params[:id])
-    end
 
     # Only allow a list of trusted parameters through.
     def message_params
