@@ -15,6 +15,42 @@ This is a simple Rails API, that will be used by React to It generate and despla
 - [Rails](https://rubygems.org/gems/rails)
 - [Postgresql](https://www.postgresql.org/)
 
+## Front end App
+
+- [Link to the  react app PR](https://github.com/Ismailco/hello-react-front-end/pull/1)
+
+## API Endpoints
+
+To get a rendom greeting message, you need to send a GET request to the following endpoint:
+
+```bash
+- [GET /messages](https://localhost:3000/messages)
+```
+To create a new message, you need to send a POST request to the following endpoint with a JSON body:
+
+```
+{
+  "title": "Message ten"
+  "text": "Hello World",
+}
+```
+
+```
+- [POST /messages](https://localhost:3000/messages)
+```
+
+To delete a message, you need to send a DELETE request to the following endpoint with a JSON body:
+
+```
+{
+  "id": 1
+}
+```
+
+```
+- [DELETE /messages](https://localhost:3000/messages)
+```
+
 ## Prerequisites
 
 For using the app you can use the Demo link above to see the app in action, no further prerequisites are needed.
@@ -50,26 +86,6 @@ Then run the server:
 
 ```
 -$ rails server
-```
-
-or
-
-```
--$ ./bin/dev
-```
-
-Then open the browser to http://localhost:3000/
-
-Then visit the URL:
-
-```
--$ http://localhost:3000
-```
-
-To run rspec, in your terminal for testing the methods:
-
-```
--$ rspec
 ```
 
 ## Authors
