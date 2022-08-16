@@ -15,6 +15,10 @@ This is a simple Rails API, that will be used by React to It generate and despla
 - [Rails](https://rubygems.org/gems/rails)
 - [Postgresql](https://www.postgresql.org/)
 
+## Front end App
+
+- [Link to the  react app PR](https://github.com/Ismailco/hello-react-front-end/pull/1)
+
 ## API Endpoints
 
 To get a rendom greeting message, you need to send a GET request to the following endpoint:
